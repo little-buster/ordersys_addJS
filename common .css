@@ -1,0 +1,172 @@
+        .dsh-floor-banner {
+            border: 1px solid;
+            height: 900px;
+            width: 748px;
+            position: relative;
+            bottom: 44px;
+            opacity: 1px;
+            border-radius: 30px;
+            color: white;
+            background-color: white;
+        }
+        
+        .dsh-d {
+            background-color: white;
+            color: #6A8B5F;
+            font-size: 20px;
+        }
+        
+        .dsh-i {
+            position: relative;
+            top: 28px;
+            left: 12px;
+        }
+        
+        .dsh-x {
+            position: relative;
+            left: 8px;
+            bottom: 16px;
+            font-size: 25px;
+            color: black;
+        }
+        
+        .dsh-t {
+            position: relative;
+            left: 340px;
+            bottom: 16px;
+            font-size: 28px;
+            color: black;
+        }
+        
+        .dsh-right {
+            position: relative;
+            left: 200px;
+            bottom: 850px;
+        }
+        
+        .dsh-left {
+            position: relative;
+            top: 45px;
+            color: black;
+            text-align: center;
+        }
+        
+        .dsh-z {
+            font-weight: bold;
+        }
+        
+        td img {
+            position: relative;
+            left: 7px;
+            top: 3px;
+            border-radius: 5%;
+        }
+        
+        .dsh-left tr td :hover {
+            background-color: white;
+            color: #749168;
+        }
+        
+        .dsh-s {
+            color: #6A8B5F;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        
+        .dsh-m {
+            color: #6A8B5F;
+        }
+        
+        .dsh-f {
+            color: #6A8B5F;
+        }
+        
+        .dsh-p {
+            color: gray;
+        }
+        
+        .dsh-j {
+            position: relative;
+            bottom: 15px;
+        }
+        
+        .dsh-y {
+            color: gray;
+        }
+        
+        .dsh-hr {
+            width: 57%;
+            position: relative;
+            right: 215px;
+            color: #C4C4C4;
+            size: 0.1px;
+            opacity: 20%;
+        }
+        
+        .dsh-ht {
+            width: 57%;
+            position: relative;
+            top: 39px;
+            right: 215px;
+            color: #C4C4C4;
+            size: 0.1px;
+            opacity: 20%;
+        }
+        
+        body {
+            margin-top: auto;
+            padding-left: 220px;
+        }
+        
+        .dsh-table {
+            position: relative;
+            bottom: 820px;
+        }
+        
+        .dsh-tr {
+            text-align: center;
+        }
+        
+        .dsh-liji {
+            width: 150px;
+            height: 50px;
+            border-radius: 50px;
+            background-color: #6A8B5F;
+            position: relative;
+            left: 160px;
+            text-align: center;
+        }
+        
+        .dsh-xia {
+            position: relative;
+            top: 15px;
+            color: aliceblue;
+        }
+        
+        .dsh-er {
+            position: relative;
+            right: 75px;
+            top: 5px;
+            color: #C4C4C4;
+        }
+        
+        .dsh-jinqian {
+            position: relative;
+            top: 6px;
+            right: 80px;
+            font-weight: bold;
+        }
+        
+        .dsh-q {
+            font-size: 20px;
+            background-color: #E9E9E9;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .dsh-g {
+            color: #C4C4C4;
+        }
