@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyj-模拟点单界面</title>
+    <link href="点餐.css" rel="stylesheet" type="text/css">
+    <script src="点餐.js"></script>
+    <script src="jquery-1.8.3.js"></script>
+</head>
+
+<body>
+    
+    <div class="cyj-cm-page">
+        <div class="cyj-menu">    
+            <div id="cyj-currentTime"></div>   
+            <div class="cyj-top-status">
+                <svg t="1704005477065" class="icon" viewBox="0 0 1294 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7290" width="25" height="25"><path d="M0 727.578947l188.631579 0 0 296.421053-188.631579 0 0-296.421053Z" p-id="7291" fill="#2c2c2c"></path><path d="M269.473684 565.894737l188.631579 0 0 458.105263-188.631579 0 0-458.105263Z" p-id="7292" fill="#2c2c2c"></path><path d="M565.894737 377.263158l161.684211 0 0 646.736842-161.684211 0 0-646.736842Z" p-id="7293" fill="#2c2c2c"></path><path d="M835.368421 188.631579l188.631579 0 0 835.368421-188.631579 0 0-835.368421Z" p-id="7294" fill="#2c2c2c"></path><path d="M1104.842105 0l188.631579 0 0 1024-188.631579 0 0-1024Z" p-id="7295" fill="#2c2c2c"></path></svg>
+                <svg t="1704005524955" class="icon" viewBox="0 0 1346 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7526" width="25" height="25"><path d="M614.762225 324.416035a578.94361 578.94361 0 0 0-397.653943 238.117618 89.918541 89.918541 0 1 0 154.434563 92.115133 407.432318 407.432318 0 0 1 262.421842-151.458536c118.438803-12.683545 237.054751 43.400399 352.482099 166.834678a89.95397 89.95397 0 0 0 131.370351-122.867416c-194.575504-207.825911-380.966932-235.81474-503.054912-222.741477z m60.866846 354.288972a172.645016 172.645016 0 1 0 172.574158 172.574159 172.645016 172.645016 0 0 0-172.645016-172.715874zM630.846944 0.985632C291.615253 16.609776 64.232591 258.695431 22.107632 307.055875a89.918541 89.918541 0 0 0 135.621819 118.049086c20.655047-23.701932 209.668214-232.023848 481.407855-244.459391 185.222275-8.502935 372.003421 75.746982 555.135391 250.553161a89.918541 89.918541 0 0 0 124.001141-130.130339C1098.366672 90.939602 867.015973-9.997326 630.846944 0.985632z" p-id="7527"></path></svg>
+                <svg id="cyj-icon-battery" t="1704005968788" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11651" width="25" height="25"><path d="M810.72 343.73c-12.64-6.73-25.18-10.36-59.72-10.36l-552.47 0.05c-29.62 0.44-41.33 4-53.14 10.31A70.5 70.5 0 0 0 116 373.06c-6.77 12.64-10.36 25.18-10.36 59.76v164.59c0.44 29.63 4 41.33 10.32 53.14a70.5 70.5 0 0 0 29.32 29.33c12.64 6.76 25.18 10.36 59.76 10.36h585.6a59.77 59.77 0 0 0 59.77-59.77V432.82c0-34.58-3.61-47.12-10.36-59.76a70.45 70.45 0 0 0-29.33-29.33z m8.67 286.73a28.75 28.75 0 0 1-28.74 28.74H205.11l-11.18-0.13c-18.44-0.48-26.11-2.37-33.94-6.56a39.4 39.4 0 0 1-16.59-16.6c-4.62-8.62-6.32-16.58-6.65-39V432.78l0.12-11.18c0.48-18.43 2.38-26.1 6.58-33.93A39.36 39.36 0 0 1 160 371.1c8.62-4.61 16.58-6.31 39-6.65h552l11.2 0.13c18.44 0.48 26.11 2.38 33.94 6.57a39.53 39.53 0 0 1 16.59 16.6c4.18 7.83 6.08 15.5 6.56 33.93l0.14 11.19zM881.48 457.5v120.2a62.08 62.08 0 0 0 0-120.2z" p-id="11652"></path><path d="M167.73 395.43m15.52 0l589.58 0q15.52 0 15.52 15.52l0 201.69q0 15.52-15.52 15.52l-589.58 0q-15.52 0-15.52-15.52l0-201.69q0-15.52 15.52-15.52Z" p-id="11653"></path></svg>
+            </div>
+            <div class="cyj-left-menu">
+                <svg id="cyj-icon-back" t="1703999959923" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="26595" width="200" height="200"><path d="M267.1 511.5L712.1 43l79.8 75.8-375 394.7 354.4 393.8-81.8 73.6z" p-id="26596"></path></svg>
+                <p>|</p>
+                <svg id="cyj-icon-home" t="1704002572877" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15341" width="25" height="25"><path d="M160 369.408V864h704V369.408L512 117.952 160 369.408zM90.816 300.8L474.752 26.56a64 64 0 0 1 74.432 0l384 274.304A64 64 0 0 1 960 352.96V896a64 64 0 0 1-64 64H128a64 64 0 0 1-64-64V352.96a64 64 0 0 1 26.816-52.096zM432 688v208a48 48 0 1 1-96 0V640a48 48 0 0 1 48-48h256a48 48 0 0 1 48 48v256a48 48 0 1 1-96 0V688H432z" fill="#2c2c2c" p-id="15342"></path></svg>            
+            
+            </div><div class="cyj-right-menu">
+                <svg id="cyj-icon-more" t="1704003920864" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2515" width="25" height="25"><path d="M512 533.333333m-128 0a128 128 0 1 0 256 0 128 128 0 1 0-256 0Z" fill="#000000" p-id="2516"></path><path d="M170.666667 533.333333m-85.333334 0a85.333333 85.333333 0 1 0 170.666667 0 85.333333 85.333333 0 1 0-170.666667 0Z" fill="#000000" p-id="2517"></path><path d="M853.333333 533.333333m-85.333333 0a85.333333 85.333333 0 1 0 170.666667 0 85.333333 85.333333 0 1 0-170.666667 0Z" fill="#000000" p-id="2518"></path></svg>
+                <p>|</p>
+                <svg id="cyj-icon-close" t="1704004437398" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8630" width="25" height="25"><path d="M512 128a384 384 0 1 1 0 768 384 384 0 0 1 0-768z m0 64a320 320 0 1 0 0 640 320 320 0 0 0 0-640z" fill="#000000" p-id="8631"></path><path d="M528.64 661.845333l160.426667-200.533333a21.333333 21.333333 0 0 0-16.64-34.645333H351.573333a21.333333 21.333333 0 0 0-16.64 34.645333l160.426667 200.533333a21.333333 21.333333 0 0 0 33.28 0z" fill="#000000" p-id="8632"></path></svg>    
+            </div>
+            <img src="imgs/bg_dining.jpg"> 
+        </div>
+       
+        <div class="cyj-floor-banner">
+            <div class="cyj-i"><img src="imgs/icon_local.png"><span class="cyj-x">星光Park店 </span> <span class="cyj-t">堂食&nbsp;:&nbsp;&nbsp;A15桌</span></div>
+            <div class="cyj-floor-goods">
+            </div>
+            <div class="cyj-left">
+                <table width="200px" height="1040px" cellpadding="0" cellspacing="0">
+
+                    <tr>
+                        <td class="cyj-q">新品上市</td>
+                    </tr>
+                    <tr>
+                        <td class="cyj-q cyj-pointed">火爆热销</td>
+                    </tr>
+                    <tr>
+                        <td class="cyj-q">无辣不欢</td>
+                    </tr>
+                    <tr>
+                        <td class="cyj-q">不辣不辣</td>
+                    </tr>
+                    <tr>
+                        <td class="cyj-q">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="cyj-q">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="cyj-q">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="cyj-q">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="cyj-q">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="cyj-q">&nbsp;</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+        <div class="cyj-right">
+            <hr class="cyj-hr">
+            <h2 class="cyj-y">&nbsp;&nbsp;&nbsp;火爆热销</h2>
+            <table width="548px" height="900px" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td rowspan="4" class="cyj-h"><img src="imgs/goods2.png"></td>
+
+                </tr>
+                <tr>
+                    <td class="cyj-z">招牌麻辣烤鱼</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="cyj-p">配菜:&nbsp;草鱼&nbsp;莴笋&nbsp;藕片&nbsp;土豆</td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <td><span class="cyj-m">￥</span><span class="cyj-s">158</span><span class="cyj-f">/份</span></td>
+                    <td>
+                        <img src="imgs/icon_minus.png">&nbsp;&nbsp;&nbsp;<span class="cyj-j">1</span>
+                        <img src="imgs/icon_add.png"></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="4" class="cyj-h"><img src="imgs/goods1.png"></td>
+
+                </tr>
+                <tr>
+
+                    <td class="cyj-z">柠檬香烤鱼</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="cyj-p">配菜:&nbsp;草鱼&nbsp;莴笋&nbsp;藕片&nbsp;土豆</td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <td><span class="cyj-m">￥</span><span class="cyj-s">158</span><span class="cyj-f">/份</span></td>
+                    <td>
+                        <img src="imgs/icon_minus.png">&nbsp;&nbsp;&nbsp;<span class="cyj-j">1</span>
+                        <img src="imgs/icon_add.png"></td>
+                </tr>
+                <tr>
+                    <td rowspan="4" class="cyj-h"><img src="imgs/goods3.png"></td>
+
+                </tr>
+                <tr>
+
+                    <td class="cyj-z">干锅烤鱼</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="cyj-p">配菜:&nbsp;草鱼&nbsp;莴笋&nbsp;藕片&nbsp;土豆</td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <td><span class="cyj-m">￥</span><span class="cyj-s">158</span><span class="cyj-f">/份</span></td>
+                    <td>
+                        <img src="imgs/icon_minus.png">&nbsp;&nbsp;&nbsp;<span class="cyj-j">0</span>
+                        <img src="imgs/icon_add.png"></td>
+                </tr>
+                <tr>
+                    <td rowspan="4" class="cyj-h"><img src="imgs/goods2.png"></td>
+
+                </tr>
+                <tr>
+
+                    <td class="cyj-z">五香烤鱼</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="cyj-p">配菜:&nbsp;草鱼&nbsp;莴笋&nbsp;藕片&nbsp;土豆</td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <td><span class="cyj-m">￥</span><span class="cyj-s">158</span><span class="cyj-f">/份</span></td>
+                    <td>
+                        <img src="imgs/icon_minus.png">&nbsp;&nbsp;&nbsp;<span class="cyj-j">0</span>
+                        <img src="imgs/icon_add.png"></td>
+                </tr>
+                <tr>
+                    <td rowspan="4" class="cyj-h"><img src="imgs/goods4.jpg" class="cyj-goods4"></td>
+
+                </tr>
+                <tr>
+
+                    <td class="cyj-z">手擀面</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="cyj-p">精选河套面粉，&nbsp;手工擀制&nbsp;</td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <td><span class="cyj-m">￥</span><span class="cyj-s">8</span><span class="cyj-f">/份</span></td>
+                    <td>
+                        <img src="imgs/icon_minus.png">&nbsp;&nbsp;&nbsp;<span class="cyj-j">2</span>
+                        <img src="imgs/icon_add.png"></td>
+                </tr>
+            </table>
+            <hr class="cyj-ht">
+        </div>
+        <div class="cyj-floor-shop">
+            <div class="cyj-left"></div>
+            <div class="cyj-right"></div>
+        </div>
+        <div class="cyj-floor-total"></div>
+    </div>
+    <div class="cyj-floor-shop">
+        <div class="cyj-left"></div>
+        <div class="cyj-right"></div>
+    </div>
+    <div class="cyj-floor-total"></div>
+    </div>
+    <div class="cyj-floor-root">
+        <div class="cyj-fr1"> <img src="imgs/icon_cart.png"></div>
+        <div class="cyj-fr2">
+            <span class="cyj-1">合计：</span>
+            <span class="cyj-2">332.00</span>
+        </div>
+        <div class="cyj-fr3"> <a href="#" class="cyj-fr4">立即下单</a></div>
+    </div>
+</body>
+
+</html>
